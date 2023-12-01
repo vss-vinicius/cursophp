@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <!-- Exemplo PHP -->
     <h1>Exemplo de PHP</h1>
 
     <?php
