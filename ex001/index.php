@@ -9,7 +9,8 @@
 
 <body>
     <h1>Dados do Servidor</h1>
-
+    
+    <!-- Exemplo PHP -->
     <?php
     phpinfo();
     ?>
