@@ -11,17 +11,26 @@
 
 <body>
     <?php
+    // Verifica se o formulário foi enviado usando o método POST
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Obtém o número do usuário do formulário (se existir), caso contrário, define como 0
         $numeroUsuario = isset($_POST["numero"]) ? $_POST["numero"] : 0;
+
+        // Calcula o antecessor e o sucessor do número fornecido pelo usuário
         $antecessor = $numeroUsuario - 1;
         $sucessor = $numeroUsuario + 1;
 
+        // Exibe os resultados na página
         echo "<p>O antecessor de $numeroUsuario é: $antecessor</p>";
         echo "<p>O sucessor de $numeroUsuario é: $sucessor</p>";
     }
 
+    // Verifica se o botão "Gerar Número Aleatório" foi pressionado
     if (isset($_POST["gerarNumero"])) {
+        // Gera um número aleatório entre 0 e 100
         $numeroAleatorio = rand(0, 100);
+
+        // Exibe o número aleatório gerado na página
         echo "<p>Número aleatório gerado: $numeroAleatorio</p>";
     }
     ?>
